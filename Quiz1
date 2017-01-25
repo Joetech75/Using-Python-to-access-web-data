@@ -12,13 +12,13 @@
 >> A list of strings
 
 5. What is the "wild card" character in a regular expression (i.e., the character that matches any character)?
->> *
+>> X *
 
 6. What is the difference between the "+" and "*" character in regular expressions?
->>? The "+" matches at least one character and the "*" matches zero or more characters
+>> The "+" matches at least one character and the "*" matches zero or more characters
 
 7. What does the "[0-9]+" match in a regular expression?
->>? Any number of digits at the beginning of a line
+>> X Any number of digits at the beginning of a line
 
 8. What does the following Python sequence print out?
     1 x = 'From: Using the : character'
@@ -35,7 +35,5 @@
 >> stephen.marquard@uct.ac.za
 
 11. Which of the following best describes "Regular Expressions"?
->> A way to calculate mathematical values paying attention to operator precedence
-   A way to solve Algebra formulas for the unknown value
-   ?A small programming language unto itself
-   The way Python handles and recovers from errors that would otherwise cause a traceback
+>> A small programming language unto itself
+   
