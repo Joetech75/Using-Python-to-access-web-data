@@ -21,6 +21,7 @@
     import tcp
     import tcp-socket
   >> x import socket
+  >> x open socket
   
   4. In a client-server application on the web using sockets, which must come up first?
     server
@@ -49,7 +50,7 @@
     How much memory does the server need to serve requests?
     Which application talks first? The client or server?
     What is the IP address for a domain like www.dr-chuck.com?
-  >> x How much memory does the server need to serve requests?
+  >> Which application talks first? The client or server?
   
   8. What are the three parts of this URL (Uniform Resource Locator)?
   1 http://www.dr-chuck.com/page1.htm
@@ -58,7 +59,7 @@
     Protocol, document, and offset
     Protocol, host, and document
     Document, page, and protocol
-  >> x Host, offset, and page
+  >> Protocol, host, and document
   
   9. When you click on an anchor tag in a web page like below, what HTTP request is sent to the server?
   1 <p>Please click <a href="page1.htm">here</a>.</p>
@@ -76,3 +77,11 @@
   IMS
   IETF
 >> IETF
+
+  11. Which of the following TCP sockets is most commonly used for the web protocol (HTTP)?
+  25
+  23
+  22
+  80
+  119
+ >> 80
