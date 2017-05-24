@@ -1,0 +1,9 @@
+1. Which of the following Python data structures is most similar to the value returned in this line of Python:
+   x = urllib.urlopen('http://www.py4inf.com/code/romeo.txt')
+regular expression
+list
+socket
+dictionary
+file handle
+
+>>
