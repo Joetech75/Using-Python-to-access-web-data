@@ -27,32 +27,24 @@ print(sum)
 # http://www.pythonlearn.com/code/BeautifulSoup.py
 # Into the same folder as this program
 
-import urllib
+
+import urllib2
 from bs4 import BeautifulSoup
 
-url = raw_input('Enter - ')
-count = int(raw_input('Enter count: '))
-position = int(raw_input('Enter position: '))
+url = raw_input("Enter url ")
+count = int(raw_input("Enter count: "))
+position = int(raw_input("Enter position: "))
 
-name = []
+names = []
 
-for i in range(0,count+1):
-	html = urllib.urlopen(url).read()
-	soup = BeautifulSoup(html)
-	if i < count:
-		print("Retrieving: ", url)
-	else:
-		print("Last url: ", url)
-		break
+while count > 0:
+    print "retrieving: {0}".format(url)
+    page = urllib2.urlopen(url)
+    soup = BeautifulSoup(page)
+    anchors = soup('a')
+    name = anchors[position-1].string
+    names.append(name)
+    url = anchors[position-1]['href']
+    count -= 1
 
-	tags = soup('a')
-	nameList = []
-	pos = 0
-	for tag in tags:
-		if pos == position -1:
-			url = str(tag.get('href',None))
-			name = url[41:-5]
-			nameList.append(name)
-			break
-		pos +=1
-print nameList[-1]
+print names[-1]
