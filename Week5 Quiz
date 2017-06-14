@@ -1,0 +1,38 @@
+1. What is the name of the Python 2.x library to parse XML data?
+
+xml.json
+xml.etree.ElementTree
+xml-misc
+xml2
+
+>> xml.etree.ElementTree
+
+2. What is the method to cause Python to parse XML that is stored in a string?
+
+fromstring()
+parse()
+readall()
+extract()
+xpath()
+
+>> fromstring()
+
+3. In this XML, which are the "simple elements"?
+
+ 1 <people>
+ 2     <person>
+ 3        <name>Chuck</name>
+ 4        <phone>303 4456</phone>
+ 5     </person>
+ 6     <person>
+ 7        <name>Noah</name>
+ 8        <phone>622 7421</phone>
+ 9     </person>
+10 </people>
+
+phone
+people
+Noah
+person
+name
+
