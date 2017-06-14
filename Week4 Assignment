@@ -19,3 +19,40 @@ for x in new_list:
 	sum = sum + x
 
 print(sum)
+
+-----
+#  Following Links in HTML Using BeautifulSoup
+
+# Note - this code must run in Python 2.x and you must download
+# http://www.pythonlearn.com/code/BeautifulSoup.py
+# Into the same folder as this program
+
+import urllib
+from bs4 import BeautifulSoup
+
+url = raw_input('Enter - ')
+count = int(raw_input('Enter count: '))
+position = int(raw_input('Enter position: '))
+
+name = []
+
+for i in range(0,count+1):
+	html = urllib.urlopen(url).read()
+	soup = BeautifulSoup(html)
+	if i < count:
+		print("Retrieving: ", url)
+	else:
+		print("Last url: ", url)
+		break
+
+	tags = soup('a')
+	nameList = []
+	pos = 0
+	for tag in tags:
+		if pos == position -1:
+			url = str(tag.get('href',None))
+			name = url[41:-5]
+			nameList.append(name)
+			break
+		pos +=1
+print nameList[-1]
