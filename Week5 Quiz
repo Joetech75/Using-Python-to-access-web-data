@@ -36,3 +36,26 @@ Noah
 person
 name
 
+>> people person
+
+
+4. In the following XML, which are attributes?
+
+ 1 <person>
+ 2   <name>Chuck</name>
+ 3   <phone type="intl">
+ 4     +1 734 303 4456
+ 5   </phone>
+ 6   <email hide="yes" />
+ 7 </person>
+
+name
+hide
+type
+email
+person
+
+>> name
+
+
+5. 
