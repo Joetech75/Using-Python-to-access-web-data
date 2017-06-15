@@ -5,23 +5,26 @@
 # Into the same folder as this program
 
 
-import urllib2
-from bs4 import BeautifulSoup
+import urllib
+from BeautifulSoup import *
 
-url = raw_input("Enter url ")
-count = int(raw_input("Enter count: "))
-position = int(raw_input("Enter position: "))
+url = raw_input('Enter URL:')
+count = raw_input('Enter count:')
+pos = raw_input('Enter position:')
 
-names = []
+count = int(count)
+pos = int(pos) - 1
+print 'Retrieving:', url
 
-while count > 0:
-    print "retrieving: {0}".format(url)
-    page = urllib2.urlopen(url)
-    soup = BeautifulSoup(page)
-    anchors = soup('a')
-    name = anchors[position-1].string
-    names.append(name)
-    url = anchors[position-1]['href']
-    count -= 1
+while 1 :
+    html = urllib.urlopen(url).read()
+    soup = BeautifulSoup(html)
+    tags= soup('a')
 
-print names[-1]
+    if count > 0 :
+        link = tags[pos].get('href', None)    # get URL from the pos of the tag
+        print 'Retrieving:', link
+        count = count - 1
+        url = link
+        continue
+    else : break
