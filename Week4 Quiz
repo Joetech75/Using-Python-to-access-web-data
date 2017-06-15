@@ -38,11 +38,9 @@ href=".+"
 http://.*
 <.*>
 
->> x href=".+"
->> x href="(.+)
 >> x <.*>
 >> x http://.*
-
+>> x href=".+"
 
 4. In this Python code, which line is most like the open() call to read a file:
    1 import socket
@@ -106,5 +104,4 @@ True if there were any anchor tags in the HTML from the URL
 All of the externally linked CSS files in the HTML from the URL
 All of the paragraphs of the HTML from the URL
 
->> x True if there were any anchor tags in the HTML from the URL
->> x All of the paragraphs of the HTML from the URL
+>> A list of all the anchor tags (<a..) in the HTML from the URL
