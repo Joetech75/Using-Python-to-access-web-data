@@ -1,0 +1,122 @@
+1. Who is credited with getting the JSON movement started?
+
+Douglas Crockford
+Mitchell Baker
+Pooja Sankar
+Bjarne Stroustrup
+
+>> Douglas Crockford
+
+
+2. What Python library do you have to import to parse and handle JSON?
+
+import json
+BeautifulSoup
+import re
+ElementTree
+
+>> import json
+
+
+3. What is the method used to parse a string containing JSON data so that you can work with the data in Python?
+
+json.read()
+json.parse()
+json.connect()
+json.loads()
+
+>> json.loads()
+
+
+4. What kind of variable will you get in Python when the following JSON is parsed:
+
+{ "id" : "001",
+  "x" : "2",
+  "name" : "Chuck"
+}
+
+A tuple with three items
+A list of tuples
+A list with three items
+A dictionary with three key / value pairs
+A list with six items
+
+>> A list with six items
+
+
+5. Which of the following is not true about the service-oriented approach?
+
+Web services and APIs are used to transfer data between applications
+An application makes use of the services provided by other applications
+An application runs together all in one place
+Standards are developed where many pairs of applications must work together
+
+>> An application runs together all in one place
+
+
+6. If the following JSON were parsed and put into the variable x,
+
+{
+    "users": [
+        {
+            "status": {
+                "text": "@jazzychad I just bought one .__.",
+             },
+             "location": "San Francisco, California",
+             "screen_name": "leahculver",
+             "name": "Leah Culver",
+         },
+   ...
+what Python code would extract "Leah Culver" from the JSON?
+
+x["users"][0]["name"]
+x["name"]
+x["users"]["name"]
+x[0]["name"]
+x->name
+
+>> x["users"]["name"]
+
+
+7. What library call do you make to append properly encoded parameters to the end of a URL like the following:
+
+http://maps.googleapis.com/maps/api/geocode/json?sensor=false&address=Ann+Arbor%2C+MI
+
+re.match()
+urllib.urlencode()
+re.encode()
+urllib.urlcat()
+
+>> urllib.urlencode()
+
+
+8. What happens when you exceed the Google geocoding API rate limit?
+
+You cannot use the API for 24 hours
+Your application starts to perform very slowly
+The API starts to perform very slowly
+You canot use the API until you respond to an email that contains a survey question
+
+>> You cannot use the API for 24 hours
+
+
+9. What protocol does Twitter use to protect its API?
+
+SHA1-MD5
+SOAP
+PKI-HMAC
+WS*Security
+Java Web Tokens
+OAuth
+
+>> OAuth
+
+
+10. What header does Twitter use to tell you how many more API requests you can make before you will be rate limited?
+
+x-rate-limit-remaining
+x-request-count-down
+x-max-requests
+content-type
+
+>> x-rate-limit-remaining
