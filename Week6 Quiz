@@ -41,7 +41,7 @@ A list with three items
 A dictionary with three key / value pairs
 A list with six items
 
->> A list with six items
+>> x A list with six items
 
 
 5. Which of the following is not true about the service-oriented approach?
@@ -75,7 +75,7 @@ x["users"]["name"]
 x[0]["name"]
 x->name
 
->> x["users"]["name"]
+>> x x["users"]["name"]
 
 
 7. What library call do you make to append properly encoded parameters to the end of a URL like the following:
