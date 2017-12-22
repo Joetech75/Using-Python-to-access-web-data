@@ -1,21 +1,23 @@
-# Scraping HTML Data with BeautifulSoup
-
-import urllib
+from urllib.request import urlopen
 from bs4 import BeautifulSoup
+import ssl
+import urllib.request
 
-url = raw_input('Enter - ')
-html = urllib.urlopen(url).read()
+# Ignore SSL certificate errors
+ctx = ssl.create_default_context()
+ctx.check_hostname = False
+ctx.verify_mode = ssl.CERT_NONE
 
-soup = BeautifulSoup(html)
-sum = 0
-list = []
+url = input('Enter - ')
+html = urlopen(url, context=ctx).read()
+soup = BeautifulSoup(html, "html.parser")
 
+# Retrieve all of the span tags
 tags = soup('span')
+sum = 0
+x=0
+list = tags
 for tag in tags:
-	list.append([int(number) for number in tag.contents])
-
-new_list = [item for sublist in list for item in sublist]
-for x in new_list:
-	sum = sum + x
-
-print(sum)
+  sum = int(tag.contents[x]) + sum
+      
+print(sum)   
